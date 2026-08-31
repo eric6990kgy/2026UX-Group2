@@ -1,0 +1,8 @@
+{
+  "name": "樂聲 KTV",
+  "description": "專為長者設計的語音搜尋 KTV 唱歌 App，支援遠端哼唱與社群揪歌功能。",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

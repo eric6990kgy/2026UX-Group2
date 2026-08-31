@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #D96330;
+  --color-primary-light: #FAEADE;
+  --color-primary-dark: #B84F22;
+
+  --color-social: #3DAA6C;
+  --color-social-light: #DCF3E8;
+
+  --color-warm-bg: #FEF9F4;
+  --color-warm-border: #EBE4DC;
+  --color-warm-card: #FFFFFF;
+
+  --color-ink: #1E2A38;
+  --color-ink-secondary: #6A7A8A;
+
+  --color-ktv-bg: #0D1B2A;
+  --color-ktv-surface: #1A2A3A;
+  --color-ktv-accent: #F5A623;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Helvetica Neue", sans-serif;
+  
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+}
+
+/* Animations and custom rules */
+@keyframes sonar-wave-1 {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+@keyframes sonar-wave-2 {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes sonar-wave-3 {
+  0% { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+@keyframes voice-wave {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1.2); }
+}
+
+/* Senior Friendly Custom Classes */
+.animate-sonar-1 {
+  animation: sonar-wave-1 2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.animate-sonar-2 {
+  animation: sonar-wave-2 2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  animation-delay: 0.4s;
+}
+
+.animate-sonar-3 {
+  animation: sonar-wave-3 2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  animation-delay: 0.8s;
+}
+
+.animate-voice-wave {
+  animation: voice-wave 1.2s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+/* Custom scrollbar to keep it clean */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* App framework sizing restriction to look like a mobile app */
+body {
+  background-color: #EBE4DC;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
